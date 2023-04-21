@@ -19,10 +19,8 @@ def train():
             if args.useGPU:
                 data1 = data.squeeze(1).cuda()
                 pred = model(Variable(data1).cuda())
-                print(pred.shape)
                 pred = pred[1,:,:]
                 label = label.unsqueeze(1).cuda()
-                print(label.shape)
             else:
                 data1 = data.squeeze(1)
                 pred = model(Variable(data1))
@@ -34,10 +32,8 @@ def train():
             total_loss += loss.item()
         print(total_loss)
         if i % 10 == 0:
-            torch.save(model, args.save_file)
             torch.save({'state_dict': model.state_dict()}, args.save_file)
             print('NO%d epoch, model' % i)
-    torch.save(model, args.save_file)
     torch.save({'state_dict': model.state_dict()}, args.save_file)
 
 train()
