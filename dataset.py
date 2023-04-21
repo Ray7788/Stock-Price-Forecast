@@ -3,6 +3,7 @@ import numpy as np
 from torch.utils.data import DataLoader,Dataset
 import torch
 from torchvision import transforms
+from common_parsers import argss
 
 # Clean data, data preprocessing, remove invalid data such as ID, stock code, previous day's closing price, transaction date, etc. that are useless for training.
 def cleanData(corpusFile,sequence_length,batchSize):
