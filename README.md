@@ -56,3 +56,7 @@ data：`csv` source data
 - Clone this project:`git clone https://github.com/Ray7788/Stock-Price-Forecast.git`
 - Train the model:`python3 train.py`
 - Run the model prediction:`python3 evluteuate.py`
+
+## Contributing
+We welcome contributions from the community. Feel free to fork the repository, make improvements, and create pull requests. 
+if you have questions please contact with ray778@foxmail.com
